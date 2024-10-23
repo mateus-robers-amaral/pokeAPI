@@ -1,0 +1,12 @@
+<body>
+  <div class="container">
+    <h1>POKEDEX</h1>
+    <div class="pokedex">
+      <div *ngFor="let pokemon of pokemons; trackBy: trackByPokemonId" class="card">
+        <img [src]="pokemon.image" alt="{{ pokemon.name }}" class="card-image" />
+        <h2 class="card-title">{{ pokemon.id }}. {{ pokemon.name | titlecase }}</h2>
+        <p class="card-subtitle">Type: {{ pokemon.type }}</p>
+      </div>
+    </div>
+  </div>
+</body>

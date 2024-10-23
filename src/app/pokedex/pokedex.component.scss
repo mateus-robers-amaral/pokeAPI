@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+
+body {
+  background-color: orangered;
+  color: white;
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* Grid da pokedex */
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+
+/* Estilos da card */
+.card {
+  list-style: none;
+  padding: 40px;
+  background-color: #f4f4f4;
+  color: #222;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+
+.card-title {
+  text-transform: capitalize;
+  margin-bottom: 0;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.card-subtitle {
+  margin-top: 5px;
+  color: #666;
+  font-weight: lighter;
+}
+
+.card-image {
+  height: 180px;
+}
+
+/* Animação bounce */
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+
+/* Para telas menores que 1024px (tablets e desktops pequenos) */
+@media screen and (max-width: 1024px) {
+  .pokedex {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 40px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .card-title {
+    font-size: 28px;
+  }
+}
+
+/* Para telas menores que 768px (tablets verticais e smartphones grandes) */
+@media screen and (max-width: 768px) {
+  .pokedex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 30px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+}
+
+/* Para telas menores que 480px (smartphones) */
+@media screen and (max-width: 480px) {
+  .pokedex {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-image {
+    height: 120px;
+  }
+}
