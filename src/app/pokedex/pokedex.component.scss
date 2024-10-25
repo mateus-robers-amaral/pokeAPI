@@ -34,9 +34,10 @@ h1 {
   background-color: #f4f4f4;
   border-radius: 15px;
   color: #222;
+  cursor: pointer;
   text-align: center;
   transition: transform 0.3s ease;
-}
+  }
 
 .card:hover {
   animation: bounce 0.5s linear;
